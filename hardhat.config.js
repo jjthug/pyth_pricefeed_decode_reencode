@@ -6,13 +6,13 @@ module.exports = {
   networks: {
     hardhat: {
       forking: {
-        url: "https://sepolia.infura.io/v3/9026ed1af77347168fdc4cb5287fe67e", // or Infura
+        url: process.env.SEPOLIA_URL, // or Infura
         accounts:[process.env.PK]
       },
     },
     sepolia:{
     // gasPrice : secret.gasPrice * 1000000000,
-    url: "https://sepolia.infura.io/v3/9026ed1af77347168fdc4cb5287fe67e",
+    url: process.env.SEPOLIA_URL,
     accounts: [process.env.PK]
   },
   },
